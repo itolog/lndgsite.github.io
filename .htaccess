@@ -24,3 +24,7 @@ ExpiresByType application/x-shockwave-flash "access 1 year"
 		AddOutputFilterByType DEFLATE font/ttf font/truetype application/font-ttf application/x-font-ttf
 	</IfModule>
 </IfModule>
+
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+  Header set Cache-Control "max-age=2592000"
+</FilesMatch>
